@@ -9,6 +9,7 @@ import { PackagesListComponent } from './packages/packages-list/packages-list.co
 import { PackageItemComponent } from './packages/packages-list/package-item/package-item.component';
 import { FoodListComponent } from './food-list/food-list.component';
 import { FoodEditComponent } from './food-list/food-edit/food-edit.component';
+import { DropdownDirective } from './shared/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FoodEditComponent } from './food-list/food-edit/food-edit.component';
     PackagesListComponent,
     PackageItemComponent,
     FoodListComponent,
-    FoodEditComponent
+    FoodEditComponent,
+    DropdownDirective,
   ],
   imports: [
     BrowserModule

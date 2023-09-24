@@ -1,1 +1,50 @@
-<p>packages-details works!</p>
+<!-- imagem -->
+ <div class="row">
+    <div class="col-12">
+        <img [src]="packageSelected.imagePath" alt="{{packageSelected.name}}" class="img-responsive"
+        style="height: 300px; max-height:300px;">
+    </div>
+ </div>
+ <!-- nome da marmita -->
+
+<div class="row">
+    <div class="col-12">
+        <h1>{{packageSelected.name}}</h1>
+    </div>
+</div>
+
+ <!-- Menu de opões -->
+
+<div class="row">
+    <div class="col-12">
+
+<div class="dropdown">
+
+        <button class="btn btn-primary dropdown-toggle" appDropdown>
+            Opções<span class="carret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="#">Para a Lista de compras</a></li>
+            <li><a href="#">Editar Marmita</a></li>
+            <li><a href="#">Remover Marmita</a></li>
+        </ul>
+    </div>
+</div>
+
+
+</div>
+
+
+
+ <!-- Descrição -->
+ <div class="row">
+    <div class="col-12">
+       {{packageSelected.description}}
+    </div>
+ </div>
+ <!-- Ingredientes -->
+ <div class="row">
+    <div class="col-12">
+        Ingredientes
+    </div>
+ </div>
