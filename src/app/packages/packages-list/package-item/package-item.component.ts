@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Package } from '../../package.model';
+import { PackageService } from '../../package.service';
 
 @Component({
   selector: 'app-package-item',
@@ -10,9 +11,11 @@ export class PackageItemComponent  implements OnInit{
 
 
 @Input() package !:Package;
-@Output() packageSelected = new EventEmitter<void>();
 
-constructor(){}
+
+constructor( private packageService: PackageService){
+
+}
 
 ngOnInit(): void {
   
@@ -21,8 +24,7 @@ ngOnInit(): void {
 
 onSelected(){
 
-this.packageSelected.emit();
-
+this.packageService.packageSelected.emit(this.package);
 
 }
 
